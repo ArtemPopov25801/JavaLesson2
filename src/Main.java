@@ -14,6 +14,7 @@ public class Main {
                 System.out.print(array1[a][b] + "\t");
             }
             System.out.println();
+        }
 
             double[][] array2 = new double[2][2];
 
@@ -31,7 +32,7 @@ public class Main {
             }
         }
     }
-}
+
 
 
 
