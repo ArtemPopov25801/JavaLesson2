@@ -16,22 +16,22 @@ public class Main {
             System.out.println();
         }
 
-            double[][] array2 = new double[2][2];
+        double[][] array2 = new double[2][2];
 
-            array2[0][0] = -2;
-            array2[0][1] = -1;
-            array2[1][0] = 5;
-            array2[1][1] = 2;
+        array2[0][0] = -2;
+        array2[0][1] = -1;
+        array2[1][0] = 5;
+        array2[1][1] = 2;
 
 
-            for (int i = 0; i < array2.length; i++) {
-                for (int j = 0; j < array2[i].length; j++) {
-                    System.out.print(array2[i][j] + "\t");
-                }
-                System.out.println();
+        for (int i = 0; i < array2.length; i++) {
+            for (int j = 0; j < array2[i].length; j++) {
+                System.out.print(array2[i][j] + "\t");
             }
+            System.out.println();
         }
     }
+}
 
 
 
