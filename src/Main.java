@@ -1,7 +1,7 @@
 
 public class Main {
     public static void main(String[] args) {
-
+        
         double[][] array1 = new double[2][2];
 
         array1[0][0] = -1;
