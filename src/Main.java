@@ -3,7 +3,6 @@ public class Main {
 
     public static void main(String args[]) {
 
-
         double[] array1 = {6, 4, 5, 3, 1, 2};
 
         double[] array2 = {15, 9, 7, 11, 13, 5};
@@ -60,14 +59,9 @@ public class Main {
 
         System.out.println();
 
-
-
         System.out.println("Вывод начения i-того элемента : " + vector.getValueByIndex(8));
 
-
         System.out.println("Длина вектора : " + vector.getLenght());
-
-
 
     }
 
