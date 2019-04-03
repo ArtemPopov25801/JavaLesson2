@@ -1,67 +1,82 @@
 
 public class Main {
-    public static void main(String[][] args) {
 
-        double[][] array = Action.parse(args);
+    public static void main(String args[]) {
 
-        for (double[][] element : array) {
+
+        double[] array1 = {6, 4, 5, 3, 1, 2};
+
+        double[] array2 = {15, 9, 7, 11, 13, 5};
+
+        System.out.print("Значения вектора 1 : ");
+
+        for (int a = 0; a < array1.length; a++) {
+            System.out.print(array1[a] + "\t");
+        }
+        System.out.println();
+
+        System.out.print("Значения вектора 2 : ");
+
+        for (int b = 0; b < array2.length; b++) {
+            System.out.print(array2[b] + "\t");
+        }
+
+        System.out.println();
+
+        System.out.println("Длина вектора 1 : " + array1.length);
+
+        System.out.println("Длина вектора 2 : " + array2.length);
+
+        System.out.print("Сортировка вектора 1 по возрастанию : ");
+
+        double[] arr1 = Vector.sortSelect(array1);
+
+        for (int i = 0; i < array1.length; i++) {
+            System.out.print(arr1[i] + " ");
+        }
+
+        System.out.println();
+
+        System.out.print("Сортировка вектора 2 по возрастанию : ");
+
+        double[] arr2 = Vector.sortSelect(array2);
+
+        for (int i = 0; i < array2.length; i++) {
+            System.out.print(arr2[i] + " ");
+        }
+
+        System.out.println();
+
+        double arrayX[] = {9, 8, 2, 4, 6, 5};
+
+        Vector vector = new Vector();
+        vector.setArray(arrayX);
+
+        double[] vectorArray = vector.getArray();
+
+        for (double element : vectorArray) {
             System.out.print(element + " ");
         }
 
         System.out.println();
 
-        double[][] arr = Action.sortSelect(array);
-
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
-                System.out.print(arr[i] + " ");
-            }
-        }
 
 
+        System.out.println("Вывод начения i-того элемента : " + vector.getValueByIndex(8));
 
 
-        double[][] array1 = new double[2][2];
+        System.out.println("Длина вектора : " + vector.getLenght());
 
-        array1[0][0] = 1;
-        array1[0][1] = -1;
-        array1[1][0] = 2;
-        array1[1][1] = 3;
-
-
-        for (int a = 0; a < array1.length; a++) {
-            for (int b = 0; b < array1[a].length; b++) {
-                System.out.println(array1[a][b] + "\t");
-            }
-            System.out.println();
-        }
-
-        double[][] array2 = new double[2][2];
-
-        array2[0][0] = -1;
-        array2[0][1] = -2;
-        array2[1][0] = 5;
-        array2[1][1] = 2;
-
-        for (int i = 0; i < array2.length; i++) {
-            for (int j = 0; j < array2[i].length; j++) {
-                System.out.println(array2[i][j] + "\t");
-            }
-            System.out.println();
-
-
-        }
-
-
-        System.out.println(array1.length + " " + "- Длина массива 1 ");
-
-        System.out.println(array2.length + " " + "- Длина массива 2 ");
 
 
     }
 
-
 }
+
+
+
+
+
 
 
 
