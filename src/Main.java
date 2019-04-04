@@ -9,59 +9,49 @@ public class Main {
 
         System.out.print("Значения вектора 1 : ");
 
-        for (int a = 0; a < array1.length; a++) {
-            System.out.print(array1[a] + "\t");
+        for (double element : array1) {
+            System.out.print(element + "\t");
         }
         System.out.println();
 
         System.out.print("Значения вектора 2 : ");
 
-        for (int b = 0; b < array2.length; b++) {
-            System.out.print(array2[b] + "\t");
+        for (double element : array2) {
+            System.out.print(element + "\t");
         }
 
         System.out.println();
 
-        System.out.println("Длина вектора 1 : " + array1.length);
+        Vector vector1 = new Vector(array1.length);
 
-        System.out.println("Длина вектора 2 : " + array2.length);
+        vector1.setArray(array1);
 
-        System.out.print("Сортировка вектора 1 по возрастанию : ");
+        Vector vector2 = new Vector(array2.length);
 
-        double[] arr1 = Vector.sortSelect(array1);
+        vector2.setArray(array2);
 
-        for (int i = 0; i < array1.length; i++) {
-            System.out.print(arr1[i] + " ");
+        System.out.println("Длина вектора 1 : " + vector1.getLength());
+        System.out.println("Последний элемент 2 вектора : " + vector2.getValueByIndex(vector2.getLength() - 1));
+        System.out.println("Минимальное значение 1 вектора : " + vector1.getMinimum());
+        System.out.println("Максимальное значение 2 вектора : " + vector2.getMaximum());
+        System.out.println("Отсортированный первый вектор : ");
+        vector1.sortSelect();
+        for (int i = 0; i < vector1.getLength(); i++) {
+            System.out.print(vector1.getValueByIndex(i) + "\t");
         }
-
         System.out.println();
-
-        System.out.print("Сортировка вектора 2 по возрастанию : ");
-
-        double[] arr2 = Vector.sortSelect(array2);
-
-        for (int i = 0; i < array2.length; i++) {
-            System.out.print(arr2[i] + " ");
+        System.out.println("Евклидова норма 2 вектора : " + vector2.evklNorm());
+        System.out.println("Умножение вектора 1 на число 7 : ");
+        vector1.multArray(7);
+        vector1.output();
+        System.out.println("Сложение двух векторов : ");
+        Vector vector = Action.sumVectors(vector1, vector2);
+        if (vector != null) {
+            vector.output();
         }
+        //   Action.sumVectors(vector1,vector2).output();
+        System.out.println("Скалярное произведение 2-х векторов : " + Action.scalMult(vector1, vector2));
 
-        System.out.println();
-
-        double arrayX[] = {9, 8, 2, 4, 6, 5};
-
-        Vector vector = new Vector();
-        vector.setArray(arrayX);
-
-        double[] vectorArray = vector.getArray();
-
-        for (double element : vectorArray) {
-            System.out.print(element + " ");
-        }
-
-        System.out.println();
-
-        System.out.println("Вывод начения i-того элемента : " + vector.getValueByIndex(8));
-
-        System.out.println("Длина вектора : " + vector.getLenght());
 
     }
 
